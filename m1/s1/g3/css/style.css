@@ -1,0 +1,16 @@
+ body{
+    font-family: arial, sans-serif;
+    text-align: center;
+    
+ }
+ #header{
+    background-color: darkgreen;
+    padding: auto;
+ }
+ #video{
+    width: auto ;height: auto;
+ }
+ #ingredienti {
+    margin-top: 30 em;
+    padding left: 0;
+ }

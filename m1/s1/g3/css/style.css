@@ -8,13 +8,17 @@ body{
     text-align: center;
     margin-inline: auto;
     width: 800px;
+    background-color:burlywood;
+
  }
  #header{
-    background-color: darkgreen;
+    background-color:whitesmoke;
     padding: auto;
+    
  }
  #video{
     width: auto ;height: auto;
+    padding-left: 0;
  }
  #ingredienti {
     margin-top: 30 em;

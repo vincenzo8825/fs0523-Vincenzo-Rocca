@@ -1,0 +1,52 @@
+body{
+    margin: 30px;
+    background-image: url(../images/sfondo.png);
+    font-size: 2em;
+    box-sizing: border-box;
+}
+.logo{
+    padding: 2px;
+    margin: auto;
+    zoom: 2rem;
+}
+.paragrafo1{
+    padding-top: 30px;
+    color:blue;
+    padding-bottom: 100px;
+}
+h1,h2,h3,h4{
+    font-size: 50px;
+    padding: 20px;
+    border: 3px solid color blue;
+}
+.inizio{
+    padding-bottom: 4rem;
+    padding-top: 100 em;
+}
+header{
+    background-image:linear-gradient rgb(0,160,198) ;
+}
+header img{
+    font-size:2remx;
+width: 400px;
+padding: auto;
+}
+.sezione{
+    text-align: auto;
+    border-top: auto   ;
+}
+table{
+    table-layout: auto;
+    width: 100px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.iframe{
+    width: 100%;
+    height: 400px;
+}
+footer{
+    padding: 10px;
+    background-color:rgb(0,160,198)
+    
+  }

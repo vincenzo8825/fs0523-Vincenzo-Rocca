@@ -1,4 +1,4 @@
-:root{
+.root{
 font: 20;
 }
 
@@ -10,6 +10,10 @@ body{
     width: 800px;
     background-color:burlywood;
 
+ }
+ #formatopagina {
+   width: 800;
+   margin: 0 auto;
  }
  #header{
     background-color:whitesmoke;

@@ -1,11 +1,75 @@
 /* Your styles here */
-.body{
+body{
+    font-family: sans-serif;
+}
+.logo {
+    background-color: black;
+    color: black;
+    margin: 20px;
+}
+.button1{
+    background-color: #f04c2f;
+    font size: 2em;
     
-    border-color: aliceblue;
-    max-width: 100px;
+}
+.container{
+background-image: url("..//images/banner.jpg");
+padding: 40px;
+margin: 20px;
+text-align: center;
 
 }
-.header{
-    padding-bottom: 10px;
-    margin: 30px;
+.h1 h2 h3 h4{
+    color:#25a2c3;
+    font-family: sans-serif;
+    font-size: 2rem;
+    padding: 20px;
+}
+.container2{
+    padding: 20px;
+    margin: 20px;
+ 
+}
+.centro{
+    padding: 20px;
+    margin: 20px;
+}
+#class{
+    padding: 20px;
+    margin: 20px;
+}
+#class2{
+    background-color: red;
+    padding: 70px;
+    margin: 20px;
+    max-width: 70em;
+}
+#class3{
+    padding: 20px;
+    margin: 20px;
+}
+.titoli{
+    text-align: center;
+    color: blue;
+}
+.notebook {
+    border-radius: 100px;
+}
+
+footer{
+    background-color: #25a2c3;
+    color: #c8e7f0;
+    text-align: center;
+    padding: 40px;
+}
+footer .footer-title {
+    color: #c8e7f0;
+    
+}
+footer a, footer address{
+    color: #c8e7f0;
+}
+.titoli2 {
+    padding: 20px;
+    font-size: 2em;
 }

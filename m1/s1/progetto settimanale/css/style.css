@@ -10,7 +10,7 @@ body{
 .button1{
     background-color: #f04c2f;
     font size: 2em;
-    
+
 }
 .container{
 background-image: url("..//images/banner.jpg");
@@ -26,12 +26,20 @@ text-align: center;
     padding: 20px;
 }
 .container2{
-    padding: 20px;
+    padding: 15px;
     margin: 20px;
  
 }
+.bordoarrotondato{
+    border-radius: 100%;
+}
+.img1{
+    padding-right: 2px;
+    margin: 2px;
+    width: 500px;
+}
 .centro{
-    padding: 20px;
+    padding: 10px;
     margin: 20px;
 }
 #class{
@@ -52,9 +60,8 @@ text-align: center;
     text-align: center;
     color: blue;
 }
-.notebook {
-    border-radius: 100px;
-}
+
+
 
 footer{
     background-color: #25a2c3;

@@ -212,8 +212,8 @@ miacity = 'Toronto'
 console.log(miacity)
 delete mio.lastName
 //rimuovo elemento css in skills
-if (indextoremove !==-1)  //non sono sicuro sia giusto//
-console.log(mio)
+//if (indextoremove !==-1)  //non sono sicuro sia giusto//
+//console.log(mio)
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.

@@ -1,7 +1,7 @@
 /* ESERCIZIO 1
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
-function trovaMaggiore(a, b) {
+function trovaMaggiore(a,b) {
   if (a > b) {
       return a;
   } else {
@@ -99,18 +99,20 @@ if (num1 > num2 && num1 > num3) {
     } else {
         console.log(num1, num3, num2);
     }
-} else if (num2 > num1 && num2 > num3) {
+} 
+  else if (num2 > num1 && num2 > num3) {
     if (num1 > num3) {
         console.log(num2, num1, num3);
     } else {
         console.log(num2, num3, num1);
     }
-} else {
+} 
+  else {
     if (num1 > num2) {
         console.log(num3, num1, num2);
     } else {
         console.log(num3, num2, num1);
-    }
+       }
 }
 
 
@@ -133,11 +135,12 @@ console.log("Il valore fornito non è un numero");
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
-function verificaPariDispari(n) {
-  if (n % 2 === 0) {
+function verificaPariDispari() {
+  if (15 % 2 === 0) {
   } else {
   }
 }
+verificaPariDispari(15)*// non sono sicuro sia corretto,in console mi dice pari e dispari ma non mi fa esempio con il numero 15
 console.log("Il numero è dispari");
 console.log("Il numero è pari");
 

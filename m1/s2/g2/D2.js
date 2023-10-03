@@ -178,11 +178,8 @@ const me = {
   lastName: 'Doe',
   skills: ['javascript', 'html', 'css'],
 }
-
-function Citta () {
-  mycity = "Toronto";
-}
-console.log();
+miacity = 'Toronto'
+console.log(miacity)
 
 
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -191,13 +188,32 @@ console.log();
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 
+const my = {
+  name: 'John',
+  lastName: 'Doe',
+  skills: ['javascript', 'html', 'css'],
+}
+miacity = 'Toronto'
+console.log(miacity)
+//rimuovo last name ma ho cambiato const me in const my perchè mi dava errore
+delete my.lastName
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+const mio = {
+  name: 'John',
+  lastName: 'Doe',
+  skills: ['javascript', 'html', 'css'],
+}
+miacity = 'Toronto'
+console.log(miacity)
+delete mio.lastName
+//rimuovo elemento css in skills
+if (indextoremove !==-1)  //non sono sicuro sia giusto//
+console.log(mio)
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.

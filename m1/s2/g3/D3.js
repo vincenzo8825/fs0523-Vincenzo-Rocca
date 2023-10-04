@@ -166,6 +166,8 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
     case 'red':
       eyeColor.red.push(starWarsCharacters[i]);
       break;
+      
+
     //case 'blue-gray'://commento in attesa di sapere come mai mi da errore bluegray
       //eyeColor['blue-gray'].push(starWarsCharacters[i]);
      // break;

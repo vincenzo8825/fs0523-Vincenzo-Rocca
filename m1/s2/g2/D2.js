@@ -1,11 +1,13 @@
 /* ESERCIZIO 1
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
-function trovaMaggiore(a,b) {
-  if (a > b) {
-      return a;
+let x =5;
+let y =10;
+function trovaMaggiore(x,y) {
+  if (x > y) {
+      return x;
   } else {
-      return b;
+      return y;
   }
 }
 console.log(trovaMaggiore)

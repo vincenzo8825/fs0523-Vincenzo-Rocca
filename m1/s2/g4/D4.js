@@ -25,7 +25,7 @@ function crazySum(a, b) {
     }
 }
 
-let risultato = crazySum(5, 5); 
+let risultato = crazySum(5, 5);
 console.log('Il risultato è: ' + risultato);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -34,7 +34,7 @@ console.log('Il risultato è: ' + risultato);
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
 */
-let a = 20;
+let a = 22;
 
 function crazyDiff(a) {
     if (a > 19) {
@@ -78,12 +78,46 @@ console.log(`Il numero ${n} è nel limite? ${isInBoundary}`);
  ritornare la stringa originale senza alterarla.
 */
 
+function epify(str) {
+    if (str.indexOf("EPICODE") === 0) {
+        return str;
+    } else {
+        return "EPICODE " + str;
+    }
+}
+
+console.log(epify(""));
+
+
+
+
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
+
+
+function check3and7(n) {
+    if (n % 3 === 0) {
+        console.log(n + " è  multiplo di 3");
+        return true;
+    } else if (n % 7 === 0) {
+        console.log(n + " è  multiplo di 7");
+        return true;
+    } else {
+        console.log(n + " non è  multiplo né di 3 né di 7");
+        return false;
+    }
+}
+
+console.log(check3and7(9));
+console.log(check3and7(14));
+console.log(check3and7(10));
+
+
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -94,7 +128,7 @@ function reverseString(stringa) {
     return stringa.split('').reverse().join('');
 }
 
-console.log(reverseString("EPICODE")); 
+console.log(reverseString("EPICODE"));
 
 
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -123,12 +157,12 @@ console.log(cutString("Vincenzo"));
 */
 function giveMeRandom(n) {
     let array = [];
-    for(let i = 0; i < n; i++) {
+    for (let i = 0; i < n; i++) {
         array.push(Math.floor(Math.random() * 11));
     }
     return array;
 }
 
-console.log(giveMeRandom(5)); 
+console.log(giveMeRandom(5));
 
 /* SCRIVI QUI LA TUA RISPOSTA */

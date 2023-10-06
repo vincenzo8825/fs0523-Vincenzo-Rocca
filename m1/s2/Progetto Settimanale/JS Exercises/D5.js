@@ -53,10 +53,6 @@ console.log(pets);
 
 
 
-
-
-
-
 /* ESERCIZIO 5
     Dato il seguente array di oggetti, scrivi del codice per aggiungere ad ognuno di essi una proprietà "licensePlate" con valore a tua scelta.
 */
@@ -153,14 +149,13 @@ while (numericArray[i] !==32) {
 */
 
 const charactersArray = ['g', 'n', 'u', 'z', 'd'];
-const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+let alphabet = 'abcdefghijklmnopqrstuvwxyz';
 let positionsArray = [];
 
 for (let i = 0; i < charactersArray.length; i++) {
-    let character = charactersArray[i];
-    let position = alphabet.indexOf(character) + 1;
-    positionsArray.push(position);
+    let character = charactersArray[i].toLowerCase();
+    let position = alphabet.indexOf(character) + 1; 
+    positionsArray.push(position || 0); 
+
+console.log(positionsArray); 
 }
-
-console.log(positionsArray); // 
-

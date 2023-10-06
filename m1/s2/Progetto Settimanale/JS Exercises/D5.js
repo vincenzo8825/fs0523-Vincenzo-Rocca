@@ -10,46 +10,39 @@ REGOLE
 /* ESERCIZIO 1
     Dato il seguente array, scrivi del codice per stampare ogni elemento dell'array in console.
 */
-const pets = ['dog', 'cat', 'hamster', 'redfish']
-for(let i =0;i< pets.length;i++){}
-console.log(pets)
+
+const pets = ['dog', 'cat', 'hamster', 'redfish'];
+pets.forEach(pet => console.log(pet));
+
+
+
+
 /* ESERCIZIO 2
     Scrivi del codice per ordinare alfabeticamente gli elementi dell'array "pets".
 */
 
-let ordinealfabetico=[];
-for(let i=0;i < pets.length;i++){
-  ordinealfabetico=pets.sort();
-}
-console.log(ordinealfabetico);
+pets.sort();
+console.log(pets);
+
 
 /* ESERCIZIO 3
     Scrivi del codice per stampare nuovamente in console gli elementi dell'array "pets", questa volta in ordine invertito.
 */
 
-let invertito=[];
-for(let i=0;i < pets.length;i++){
-  invertito=pets.sort()
-  invertito=pets.reverse();
-}
-console.log(invertito);
+pets.reverse();
+console.log(pets);
+
 
 
 /* ESERCIZIO 4
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
 */
 
-
-
-
-let cane = pets.indexOf('dog');
-
-if (cane !== -1) {
-  let dog = pets.splice(cane, 1)[0]; 
-  pets.push(dog);
-}
-
+pets.push(pets.shift());
 console.log(pets);
+
+
+
 
 
 
@@ -88,12 +81,8 @@ const cars = [
   },
 ]
 
-for(let i = 0; i < cars.length; i++){
-  cars[i].licensePlate = immatricolazione=('2023');
-}
-
-console.log(cars);
-
+cars.forEach(car => car.licensePlate = "2023");
+console.log(cars)
 
 
 
@@ -108,11 +97,17 @@ cars.push({
   color: 'nero',
   trims: ['bella', 'brutta', 'cattiva'],
 });
-for(let i = 0; i < cars.length; i++){
-  delete cars[i].trims;
-}
 
+for(let i = 0; i < cars.length; i++) {
+  cars[i].trims.pop();
+}
 console.log(cars);
+
+
+
+
+
+
 
 
 
@@ -127,16 +122,45 @@ const justTrims = []
     "color" ha valore "b", mostra in console "Fizz". Altrimenti, mostra in console "Buzz".
 */
 
+for(let i = 0; i < cars.length; i++) {
+  if (cars[i].color.charAt(0) === "b") {
+  } else {
+  }
+}
+console.log("Fizz");
+console.log("Buzz");
+
+
+
+
 /* ESERCIZIO 9
     Utilizza un ciclo while per stampare in console i valori del seguente array numerico fino al raggiungimento del numero 32.
 */
 const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
 ]
+let i = 0;
+while (numericArray[i] !==32) {
+   console.log(numericArray[i]);
+   i++;
+  }
+  console.log(numericArray[i]);
 
 /* ESERCIZIO 10
     Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
     dell'alfabeto italiano.
     es. [f, b, e] --> [6, 2, 5]
 */
-const charactersArray = ['g', 'n', 'u', 'z', 'd']
+
+const charactersArray = ['g', 'n', 'u', 'z', 'd'];
+const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+let positionsArray = [];
+
+for (let i = 0; i < charactersArray.length; i++) {
+    let character = charactersArray[i];
+    let position = alphabet.indexOf(character) + 1;
+    positionsArray.push(position);
+}
+
+console.log(positionsArray); // 
+

@@ -1,0 +1,137 @@
+body {
+    background-color: white;
+    font: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+.logo {
+    height: 80px;
+    background-color: #192f46;
+    
+}
+
+.allineoimmagini{
+    width: auto;
+    display: block;
+}
+
+.link-footer {
+    background-color: #233343;
+}
+
+.section-immagini {
+    margin: 40px;
+    padding: 20px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+.navbar {
+background-color: #254568;
+    list-style: none;
+    padding: 10px;
+    font-size: larger;
+}
+
+.immagini1 {
+    background-image: url(../images/bg-image.png);
+    height: 150px;
+    margin: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+
+.navbar li {
+    display: inline;
+    margin-left: 20px;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 5px;
+    color: #E3F2FB;
+}
+    
+aside {
+        text-align: center;
+        background-color: red;
+    }
+
+aside h2 {
+    font-size: larger;
+    font-weight: bold;
+    padding: 20px;
+    
+}
+.ciao{
+    background-color: red;
+}
+
+.fig{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+.section-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.section-image figcaption {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-image p {
+    margin: 0;
+    padding-right: 5px;
+}
+
+.section-image a {
+    text-decoration: none;
+}
+
+
+
+
+.link-footer {
+    text-align: center;
+}
+
+.link-footer a {
+    color: #d5dcea;
+}
+
+.logo-footer {
+    background-color: #254568;
+}
+
+.logo-footer img {
+    max-width: 100px;
+    display: block;
+    padding: 50px;
+    margin: 0 auto;
+}

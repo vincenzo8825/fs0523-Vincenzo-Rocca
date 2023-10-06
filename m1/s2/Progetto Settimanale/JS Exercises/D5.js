@@ -94,7 +94,7 @@ cars.push({
   trims: ['bella', 'brutta', 'cattiva'],
 });
 
-for(let i = 0; i < cars.length; i++) {
+for (let i = 0; i < cars.length; i++) {
   cars[i].trims.pop();
 }
 console.log(cars);
@@ -118,7 +118,7 @@ const justTrims = []
     "color" ha valore "b", mostra in console "Fizz". Altrimenti, mostra in console "Buzz".
 */
 
-for(let i = 0; i < cars.length; i++) {
+for (let i = 0; i < cars.length; i++) {
   if (cars[i].color.charAt(0) === "b") {
   } else {
   }
@@ -136,11 +136,11 @@ const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
 ]
 let i = 0;
-while (numericArray[i] !==32) {
-   console.log(numericArray[i]);
-   i++;
-  }
+while (numericArray[i] !== 32) {
   console.log(numericArray[i]);
+  i++;
+}
+console.log(numericArray[i]);
 
 /* ESERCIZIO 10
     Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
@@ -153,9 +153,90 @@ let alphabet = 'abcdefghijklmnopqrstuvwxyz';
 let positionsArray = [];
 
 for (let i = 0; i < charactersArray.length; i++) {
-    let character = charactersArray[i].toLowerCase();
-    let position = alphabet.indexOf(character) + 1; 
-    positionsArray.push(position || 0); 
+  let character = charactersArray[i].toLowerCase();
+  let position = alphabet.indexOf(character) + 1;
+  positionsArray.push(position || 0);
 
-console.log(positionsArray); 
+  console.log(positionsArray);
 }
+
+/*
+const charactersArray = ['g', 'n', 'u', 'z', 'd'];
+let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+
+let positionsArray = [];
+
+for (let i = 0; i < charactersArray.length; i++) {
+  const character = charactersArray[i];
+  switch (character) {
+    case 'a':
+      positionsArray.push(1);
+      break;
+    case 'b':
+      positionsArray.push(2);
+      break;
+    case 'c':
+      positionsArray.push(3);
+      break;
+    case 'd':
+      positionsArray.push(4);
+      break;
+    case 'e':
+      positionsArray.push(5);
+      break;
+    case 'f':
+      positionsArray.push(6);
+      break;
+    case 'g':
+      positionsArray.push(7);
+      break;
+    case 'h':
+      positionsArray.push(8);
+      break;
+    case 'i':
+      positionsArray.push(9);
+      break;
+    case 'l':
+      positionsArray.push(10);
+      break;
+    case 'm':
+      positionsArray.push(11);
+      break;
+    case 'n':
+      positionsArray.push(12);
+      break;
+    case 'o':
+      positionsArray.push(13);
+      break;
+    case 'p':
+      positionsArray.push(14);
+      break;
+    case 'q':
+      positionsArray.push(15);
+      break;
+    case 'r':
+      positionsArray.push(16);
+      break;
+    case 's':
+      positionsArray.push(17);
+      break;
+    case 't':
+      positionsArray.push(18);
+      break;
+    case 'u':
+      positionsArray.push(19);
+      break;
+    case 'v':
+      positionsArray.push(20);
+      break;
+    case 'z':
+      positionsArray.push(21);
+      break;
+    default:
+      positionsArray.push(-1);
+}
+
+console.log(positionsArray);
+
+
+*/

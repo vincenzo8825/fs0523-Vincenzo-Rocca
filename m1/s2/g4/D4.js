@@ -2,10 +2,10 @@
  Scrivi una funzione di nome "area", che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato..
 */
 function area(l1, l2) {
-    let area = l1 * l2;
-    return area;
+    return l1 * l2;
+    
 }
-console.log("L'area del rettangolo è: " + area);
+console.log( area(2,5));
 
 
 

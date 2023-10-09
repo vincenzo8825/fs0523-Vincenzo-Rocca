@@ -297,3 +297,18 @@ console.log(filmVecchio);
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
+
+function indicePrimoFilmAnno(anno, movies) {
+  const index = movies.findIndex((movie) => movie.Year === anno.toString());
+  return index;
+}
+
+
+const annoRicerca = '2002'; 
+const indice = indicePrimoFilmAnno(annoRicerca, movies);
+
+if (indice !== -1) {
+} else {
+}
+console.log(`Il primo film uscito nell'anno ${annoRicerca} si trova all'indice ${indice}.`);
+console.log(`Nessun film trovato per l'anno ${annoRicerca}.`);

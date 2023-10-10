@@ -84,7 +84,7 @@
   */
 
   const changeTitle = function () {
-  const h1Element = document.querySelector('h1');
+  let h1Element = document.querySelector('h1');
   h1Element.textContent = "ciao vincenzo";
 }
 
@@ -100,7 +100,7 @@ changeTitle();
     const addClassToTitle = function () {
 
   
-  const h1Element = document.querySelector('h1');
+  let h1Element = document.querySelector('h1');
   h1Element.classList.add('myHeading');
 }
 
@@ -114,7 +114,7 @@ addClassToTitle();
 
     const changePcontent = function () {
 
-      const divWithText = document.querySelector('div p');
+      let divWithText = document.querySelector('div p');
       divWithText.textContent = "Il testo è stato cambiato!";
     }
     changePcontent();
@@ -129,7 +129,7 @@ addClassToTitle();
 
     const changeUrls = function () {
 
-      const links = document.querySelectorAll('a:not([href^="https://developer.mozilla.org"])');
+      let links = document.querySelectorAll('a:not([href^="https://developer.mozilla.org"])');
       links.forEach(link => {
         link.href = "https://www.google.com";
       });
@@ -146,9 +146,9 @@ addClassToTitle();
   */
 
     const addToTheSecond = function () {
-      const secondList = document.getElementById('secondList');
-      const newItem = document.createElement('li');
-      newItem.textContent = "Nuovo elemento";
+      let secondList = document.getElementById('secondList');
+      let newItem = document.createElement('li');
+      newItem.textContent = "4th";
       secondList.appendChild(newItem);
     }
     addToTheSecond();
@@ -162,8 +162,8 @@ addClassToTitle();
     const addParagraph = function () {
 
 
-      const firstDiv = document.querySelector('div');
-      const newParagraph = document.createElement('p');
+      let firstDiv = document.querySelector('div');
+      let newParagraph = document.createElement('p');
       newParagraph.textContent = "Nuovo paragrafo aggiunto al primo div.";
       firstDiv.appendChild(newParagraph);
     }
@@ -179,7 +179,7 @@ addClassToTitle();
 
 
     const hideFirstUl = function () {
-      const firstUl = document.getElementById('firstList');
+      let firstUl = document.getElementById('firstList');
       firstUl.style.display = "none";
     }
     hideFirstUl();
@@ -194,7 +194,7 @@ addClassToTitle();
 
 
     const paintItGreen = function () {
-      const lists = document.querySelectorAll('ul');
+      let lists = document.querySelectorAll('ul');
       lists.forEach(list => {
         list.style.backgroundColor = "green";
       });
@@ -214,7 +214,7 @@ addClassToTitle();
 
 
     const makeItClickable = function () {
-      const h1Element = document.querySelector('h1');
+      let h1Element = document.querySelector('h1');
       h1Element.addEventListener('click', function () {
         this.textContent = this.textContent.slice(0, -1);
       });
@@ -233,7 +233,7 @@ addClassToTitle();
 
 
     const revealFooterLink = function () {
-      const footerLink = document.querySelector('footer a');
+      let footerLink = document.querySelector('footer a');
       footerLink.addEventListener('click', function (event) {
         event.preventDefault();
         alert(this.href);
@@ -270,14 +270,14 @@ addClassToTitle();
 
     const changeColorWithRandom = function () {
 
-      const changeColorWithRandom = function () {
-        const h2Element = document.getElementById('changeMyColor');
-        const randomColor = getRandomColor();
+      
+        let h2Element = document.getElementById('changeMyColor');
+        let randomColor = getRandomColor();
         h2Element.style.color = randomColor;
         console.log
       }///non sono riuscito ad andare piu avanti
 
-    }
+    
 
     /* EXTRA ESERCIZIO 16
     Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
@@ -286,7 +286,7 @@ addClassToTitle();
 
 
     const deleteVowels = function () {
-      const elementsWithText = document.querySelectorAll('p, h1, h2, a');
+      let elementsWithText = document.querySelectorAll('p, h1, h2, a');
       elementsWithText.forEach(element => {
         element.textContent = element.textContent.replace(/[aeiou]/g, '');
       });

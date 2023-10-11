@@ -1,0 +1,93 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(73, 133, 54);
+    margin: 10px;
+    padding: 50px;
+}
+
+
+.container {
+   
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    background-color:rgb(139, 228, 145);
+    border-radius: 10px;
+    padding: 20px;
+   
+}
+
+
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+
+
+input, button {
+    background-color:rgb(139, 228, 145);
+    padding: 15px;
+    width: 70%;
+    border: 3px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    padding-bottom: 20px;
+    margin: 20px;
+}
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+li{
+
+margin: 20px;
+padding: 20px;
+    text-decoration: line-through;
+    background-color: rgb(137, 234, 135);
+}
+ 
+
+
+
+
+
+
+
+
+button.delete {
+    background-color: #FF5733;
+    color: rgb(243, 15, 41);
+    border: none;
+    border-radius: 5px;
+   
+}
+
+
+
+.orologio {
+    font-size: 20px;
+    background-color: rgb(218, 2, 2);
+    margin-top: 20px;
+    display: inline;
+}
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+ 
     let taskInput = document.getElementById('taskInput');
     let addTaskButton = document.getElementById('aggiungi task');
     let taskList = document.getElementById('taskList');
@@ -43,5 +43,5 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(updateClock, 1000);
 
     updateClock();
-});
+;
 

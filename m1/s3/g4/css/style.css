@@ -1,0 +1,38 @@
+#tabellone {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    background-image: url(/images/images\ \(1\).jpeg);
+}
+.titolo{
+    text-align: center;
+    
+    background-color: purple;
+    padding: 20px;
+    margin: 0;
+}
+.sfondo{
+    
+    background-image: url(/images/images\ \(1\).jpeg);
+}
+#estraiNumero {
+    font-size: large;
+    padding: 10px;
+    margin: 20px; 
+    background-color: cornflowerblue;
+}
+.cella {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    background-color:whitesmoke;
+}
+
+.cella.evidenziata {
+    background-color: yellow;
+}

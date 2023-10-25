@@ -7,7 +7,7 @@ body {
 }
 
 a,
-a:visited {
+a{
     color: #622407;
     text-decoration: none;
 }

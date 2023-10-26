@@ -1,0 +1,99 @@
+/* COLORI */
+:root {
+   --postit-yellow: #b7b254;
+   --postit-green: #addeaf;
+   --postit-purple: #d3d3e3;
+}
+
+/* GENERALE */
+body {
+   margin: 0;
+   box-sizing: border-box;
+   max-width: 100%;
+}
+
+/* POSTIT */
+#container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   font-family: 'Indie Flower', sans-serif;
+   padding: 10px;
+   background-color: grey;
+   box-shadow: inset 0px 0px 50px rgba(80, 14, 14, 0.5);
+   margin: 5px;
+   border-radius: 30px;
+}
+
+.postit {
+   width: 20px;
+   height: 10px;
+   padding: 60px;
+   margin: 20px;
+   
+   transition: transform 0.5s, box-shadow 0.5s;
+   
+}
+
+.postit:hover {
+   cursor: pointer;
+   transform: scale(1.15) rotate(0deg);
+   box-shadow: 0px 10px 10px rgb(141, 126, 126);
+   position: relative;
+   z-index: 1;
+   background-color: #686d95;
+   animation: bounce 1s ease infinite; 
+   animation: zoomIn 0.3s forwards;
+
+}
+
+@keyframes bounce {
+   0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+   }
+   40% {
+      transform: translateY(-10px);
+   }
+   60% {
+      transform: translateY(-5px);
+   }
+}
+
+@keyframes zoomIn {
+   from {
+      transform: scale(1);
+   }
+   to {
+      transform: scale(1.2);
+   }
+}
+.taskNumber {
+   font-size: 0.8rem;
+   margin-bottom: 0px;
+
+   display: flex;
+  
+}
+
+.task {
+   font-size: 0.5em;
+   height: 90px;
+   
+}
+
+/* COLORI DEI POSTIT */
+.postit-yellow {
+   background-color: #b7b254;
+   transform: rotate(-4deg);
+}
+
+.postit-green {
+   background-color: #addeaf;
+   transform: rotate(-6deg);
+}
+
+.postit-purple {
+   background-color: #d3d3e3;
+   transform: rotate(-5deg);
+}
+

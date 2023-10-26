@@ -1,6 +1,6 @@
 /* COLORI */
 :root {
-   --postit-yellow: #b7b254;
+   --postit-yellow: #b8b62c;
    --postit-green: #addeaf;
    --postit-purple: #d3d3e3;
 }
@@ -22,7 +22,7 @@ body {
    background-color: grey;
    box-shadow: inset 0px 0px 50px rgba(80, 14, 14, 0.5);
    margin: 5px;
-   border-radius: 30px;
+  
 }
 
 .postit {
@@ -83,7 +83,7 @@ body {
 
 /* COLORI DEI POSTIT */
 .postit-yellow {
-   background-color: #b7b254;
+   background-color: #d7d733;
    transform: rotate(-4deg);
 }
 

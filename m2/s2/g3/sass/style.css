@@ -1,0 +1,15 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap");
+.container{
+
+  color: #f4f4f4;
+  
+ display: inline-block;
+
+ display: flex;
+ ;
+ gap: 70px;
+}/*# sourceMappingURL=style.css.map */
+ button{
+  color: #4caf50;
+ }

@@ -37,3 +37,35 @@ clearButton.addEventListener('click', function () {
 
 
 updateSavedNamesList()
+
+//ora fai in modo che crei un altro form dove inserire il nome degli animali e assicurati che il form sia rosso,crealo perche sull html non ce
+
+const animalForm = document.getElementById('animalForm');
+const animalNameInput = document.getElementById('animalNameInput');
+const saveAnimalButton = document.getElementById('saveAnimalButton');
+const clearAnimalButton = document.getElementById('clearAnimalButton');
+const savedAnimalsList = document.getElementById('savedAnimalsList');
+
+let animaliSalvati = localStorage.getItem('animaliUtenti')? localStorage.getItem('animaliUtenti').split(',') : [];
+  
+function updateSavedAnimalsList() {
+    savedAnimalsList.innerHTML = '';
+    animaliSalvati.forEach(function (nome) {
+        const listItem = document.createElement('li');
+        listItem.textContent = nome;
+        savedAnimalsList.appendChild(listItem);
+    });
+
+}
+
+saveAnimalButton.addEventListener('click', function () {
+    const animalNameInputValue = animalNameInput.value;
+    if (animalNameInputValue) {
+        animaliSalvati.push(animalNameInputValue);
+        localStorage.setItem('animaliUtenti', animaliSalvati);
+        updateSavedAnimalsList();
+        animalNameInput.value = '';
+    }
+});
+     innerHTML  = '';   //  remove  the element         
+     updateSavedAnimalsList();

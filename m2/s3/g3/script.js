@@ -51,7 +51,7 @@ function updateCart() {
             cartItems = cartItems.filter(i => i.title !== item.title && i.price !== item.price);
             cartItem.remove();
         });
-        cartItem.appendChild(removeButton);
-        cartList.appendChild(cartItem);
+        cartItem.append(removeButton);
+        cartList.append(cartItem);
     });
 }

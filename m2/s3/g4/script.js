@@ -25,41 +25,51 @@
 
 
 
+  
 
-async function searchImages() {
-  let query = document.getElementById('searchInput').value;
-  let apiUrl = 'https://api.pexels.com/v1/search?query=' + (query);
 
-  try {
-    let response = await fetch(apiUrl, {
-      headers: {
-        Authorization: 'MPnGzHs8j3OZqWMy6a7lVpFaRVHuqroOeJXtpIUvRRddeBzjbfYK9RKY',
-      },
-    });
 
-    let data = await response.json();
-    let imageContainer = document.querySelector('.album .container .row');
-    imageContainer.innerHTML = '';
+async function getImages(query) {
 
-    data.photos.forEach(photo => {
-      let cardTemplate = document.getElementById('cardTemplate');
-      let card = cardTemplate.content.cloneNode(true);
-
-      card.querySelector('.col-md-4').style.display = 'block';
-      card.querySelector('.card-img-top').src = photo.src.medium;
-      card.querySelector('.card-img-top').alt = photo.photographer;
-      card.querySelector('.card-title').textContent = photo.photographer;
-      card.querySelector('.card-text').textContent = photo.url;
-      card.querySelector('.btn').addEventListener('click', () => hideCard(card));
-      card.querySelector('.text-muted').textContent = photo.id;
-
-      imageContainer.appendChild(card);
-    });
-  } catch (error) {
-    console.error('Errore nella richiesta:', error);
-  }
+  let apiUrl = 'https://api.pexels.com/v1/search?query=';
+  const api_key = 'MPnGzHs8j3OZqWMy6a7lVpFaRVHuqroOeJXtpIUvRRddeBzjbfYK9RKY';
+  
+  
+  const response = await fetch(apiUrl + query, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': api_key,
+    },
+  });
 }
+    
+  /////        });
 
-function hideCard(card) {
-  card.style.display = 'none';
-}
+   /////       let data = await response.json();
+    /////      let imageContainer = document.querySelector('.album .container .row');
+   /////       imageContainer.innerHTML = '';
+/////
+         // data.photos.forEach(photo => {
+   /////         let cardTemplate = document.getElementById('cardTemplate');
+           // let card = cardTemplate.content.cloneNode(true);
+/////
+    /////        card.querySelector('.col-md-4').style.display = 'block';
+  /////          card.querySelector('.card-img-top').src = photo.src.medium;
+    /////        card.querySelector('.card-img-top').alt = photo.photographer;
+    /////        card.querySelector('.card-title').textContent = photo.photographer;
+    /////        card.querySelector('.card-text').textContent = photo.url;
+    /////        card.querySelector('.btn').addEventListener('click', () => hideCard(card));
+    /////        card.querySelector('.text-muted').textContent = photo.id;
+/////
+    /////        imageContainer.appendChild(card);
+        //  });
+    ///// /////   } catch (error) {
+         // console.error('Errore nella richiesta:', error);
+        //}
+    // }
+/////
+    /////  function hideCard(card) {
+       // card.style.display = 'none';
+   /////   }
+/////

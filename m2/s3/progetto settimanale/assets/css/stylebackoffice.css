@@ -1,0 +1,37 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #232f3e;
+    border-bottom: none;
+    border-radius: 15px 15px 0 0;
+}
+
+.card-title {
+    color: #fff;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.btn-warning {
+    background-color: #FF9900;
+    border-color: #FF9900;
+}
+
+.btn-warning:hover {
+    background-color: #cc7a00;
+    border-color: #cc7a00;
+}

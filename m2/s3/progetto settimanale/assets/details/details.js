@@ -51,7 +51,7 @@ const displayDetails = function (prodotto) {
     linkElement.classList.add("btn", "btn-primary", "mt-5");
     linkElement.textContent = "MODIFICA";
 
-    // Aggiunta degli elementi al DOM
+    
     target.appendChild(imgElement);
 
     let detailsContainer = document.createElement("div");
@@ -63,7 +63,7 @@ const displayDetails = function (prodotto) {
     target.appendChild(detailsContainer);
 };
 
-// Chiamata alla funzione getProduct quando la pagina è completamente caricata
+
 window.onload = () => {
     getProduct();
 };

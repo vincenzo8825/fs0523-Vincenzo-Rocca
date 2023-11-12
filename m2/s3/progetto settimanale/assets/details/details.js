@@ -1,19 +1,23 @@
+
+const addressBarContent = new URLSearchParams(window.location.search);
+const productId = addressBarContent.get('productId');
+
+
 const endpoint = "https://striveschool-api.herokuapp.com/api/product/";
 
-let addressBarContent = new URLSearchParams(window.location.search);
-let productId = addressBarContent.get('productId');
 
 const getProduct = function () {
     fetch(endpoint + productId, {
         headers: {
-            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlMTQ4NTg4Zjc0MDAwMTQyODc1OTkiLCJpYXQiOjE2ODM4ODcyMzcsImV4cCI6MTY4NTA5NjgzN30.hgJHWP6lWcscbBf5TfsPRQmgqwE4aNrVJx-hNBKqROQ"
+            "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRlNjc5ODJiY2QzYjAwMTk1MTc5OGYiLCJpYXQiOjE2OTk2MzcxNDQsImV4cCI6MTcwMDg0Njc0NH0.gr9zzZDOo9uGZ2WKkqZHOWoOy0TOEBJtiFYJhgFOnK4"
+            
         }
     })
         .then((res) => {
             if (res.ok) {
                 return res.json();
             } else {
-                throw new Error("7) ERRORE NEL CARICARE IL DETAIL");
+                throw new Error("Errore nel caricare i dettagli del prodotto");
             }
         })
         .then((data) => {
@@ -25,11 +29,11 @@ const getProduct = function () {
         });
 };
 
+// 
 const displayDetails = function (prodotto) {
-
     let target = document.getElementById("detailTarget");
-    
-  
+
+   
     let imgElement = document.createElement("img");
     imgElement.src = prodotto.imageUrl;
     imgElement.classList.add("card-img");
@@ -43,10 +47,11 @@ const displayDetails = function (prodotto) {
     descriptionElement.textContent = prodotto.description;
 
     let linkElement = document.createElement("a");
-    linkElement.href = `../office/office.html?productId=${prodotto._id}`;
+    linkElement.href = `../office/backoffice.html?productId=${prodotto._id}`;
     linkElement.classList.add("btn", "btn-primary", "mt-5");
     linkElement.textContent = "MODIFICA";
 
+    // Aggiunta degli elementi al DOM
     target.appendChild(imgElement);
 
     let detailsContainer = document.createElement("div");
@@ -58,6 +63,7 @@ const displayDetails = function (prodotto) {
     target.appendChild(detailsContainer);
 };
 
+// Chiamata alla funzione getProduct quando la pagina è completamente caricata
 window.onload = () => {
     getProduct();
 };

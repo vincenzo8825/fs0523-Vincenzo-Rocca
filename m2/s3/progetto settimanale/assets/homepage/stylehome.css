@@ -1,0 +1,146 @@
+ body {
+      background-color: #f8f9fa;
+      margin-bottom: 70px;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .navbar {
+      background-color: #FF9900;
+    }
+
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: #ffffff;
+    }
+
+    .navbar-brand:hover,
+    .navbar-nav .nav-link:hover {
+      color: #dc3545;
+    }
+
+    .btn-outline-danger {
+      color: #dc3545;
+      border-color: #dc3545;
+    }
+
+    .btn-outline-danger:hover {
+      color: #fff;
+      background-color: #dc3545;
+      border-color: #dc3545;
+    }
+
+    .bi {
+      vertical-align: text-bottom;
+    }
+
+    .container {
+      margin-top: 30px;
+    }
+
+    .product-card {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #fff;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .card-img-top {
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .card-title {
+      color: #333;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .card-text {
+      color: #555;
+    }
+
+    .btn-danger {
+      background-color: #FF9900;
+      border: 1px solid #FF9900;
+      color: #fff;
+    }
+
+    .btn-danger:hover {
+      background-color: #FF8C00;
+      border: 1px solid #FF8C00;
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 15px 0;
+    }
+
+    .featured-section {
+      background-color: #fff;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    .featured-section h2 {
+      color: #333;
+    }
+
+    .featured-products {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .featured-product-card {
+      max-width: 200px;
+      margin: 15px;
+      text-align: center;
+    }
+
+    .featured-product-card img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .subscribe-section {
+      background-color: #FF9900;
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    .subscribe-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .subscribe-form {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .subscribe-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .subscribe-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #343a40;
+      border: 1px solid #343a40;
+      color: #fff;
+    }
+
+    .subscribe-form button:hover {
+      background-color: #555;
+      border: 1px solid #555;
+    }

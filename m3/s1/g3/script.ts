@@ -55,3 +55,4 @@ abstract class LavoratoreAutonomo {
   console.log("Tasse IRPEF:", lavoratore1.getTasselrpef());
   console.log("Reddito Annuo Netto:", lavoratore1.getRedditoAnnuoNetto());
   console.log("Utile Tasse:", lavoratore1.getUtileTasse());
+  

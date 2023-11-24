@@ -1,0 +1,31 @@
+Progetta un'interfaccia di nome Sim, che rappresenti un telefono cellulare con contratto a ricarica.
+Tale interfaccia prevede le seguenti variabili d’istanza:
+carica:number => rappresenta il quantitativo di euro disponibile per le chiamate.
+numeroChiamate:number => numero chiamate effettuate
+costoMinuto:number => il costo delle chiamate
+Aggiungi all'interfaccia i seguenti metodi:
+ricarica(euro:number):void
+numero404():string
+getNumeroChiamate():number
+chiamata(min:number):void
+azzeraChiamate():void
+Crea la classe Smartphone ed implementa la suddetta interfaccia.
+I metodi si comporteranno nel seguente modo:
+ricarica => permette di incrementare il credito residuo( carica )
+numero404 => mostra il credito residuo (comprensivo di valuta)
+getNumeroChiamate => restituisce il numero delle chiamate effettuate
+chiamata => effettua virtualmente una chiamata. Inserendo il numero di minuti pari alla durata della chiamata riduce il credito residuo, ed incrementa il numero di chiamate
+azzeraChiamate => azzera il contatore di chiamate
+Nota bene: i console.log devono essere lanciati al di fuori della classe e dei suoi metodi.
+  Crea almeno 3 istanze della classe Smartphone, effettua ricariche e testa tutte le funzioni.
+Mostra il funzionamento nella console.
+
+
+Extra
+Aggiungi una proprietà registroChiamate che contenga un array di oggetti contenenti i seguenti dati:
+id
+durata
+Data ed ora della chiamata
+Aggiorna la classe in modo che il registro funzioni, e crea i seguenti metodi:
+mostraRegistroChiamate() => mostra tutte le chiamate effettuate
+filtraChiamatePerDataOra() => mostra solo le chiamate effettuate in una determinata data ed ora

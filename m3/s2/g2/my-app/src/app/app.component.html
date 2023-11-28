@@ -1,0 +1,18 @@
+
+
+<div class="container mt-5">
+  <div class="row mb-3">
+    <div class="col">
+      <button type="button" class="btn btn-primary" (click)="showPostAttivi = true">Post Attivi</button>
+      <button type="button" class="btn btn-secondary" (click)="showPostAttivi = false">Post Inattivi</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <app-post-attivi *ngIf="showPostAttivi"></app-post-attivi>
+      <app-post-inattivi *ngIf="!showPostAttivi"></app-post-inattivi>
+    </div>
+  </div>
+</div>
+

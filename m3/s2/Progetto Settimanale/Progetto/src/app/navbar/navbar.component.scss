@@ -1,15 +1,17 @@
-// styles.scss
-
 .navbar {
   background-color: #095e2c;
   padding: 15px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 
   a {
     text-decoration: none;
-    color: #260404;
+    color: #fff;
     font-size: 18px;
+    font-weight: bold;
     transition: color 0.3s ease-in-out;
 
     &:hover {
@@ -25,16 +27,19 @@ div {
     display: inline-block;
     margin-right: 20px;
     text-decoration: none;
-    color: #000000;
+    color: #333;
     font-size: 16px;
+    transition: text-decoration 0.3s ease-in-out, color 0.3s ease-in-out;
 
     &:hover {
       text-decoration: underline;
+      color: #1a839d;
     }
   }
 }
 
 a {
+  color: #1a839d;
   transition: color 0.3s ease-in-out;
 
   &:hover {
@@ -42,12 +47,41 @@ a {
   }
 }
 
-.navbar a.router-link-active {
-  border-bottom: 2px solid #fff;
-}
-.titolo{
-  background-color: #dbd2d2;
+.titolo {
+  background-color: #2ecc71;
   justify-content: center;
   display: flex;
-  background-color:#2ecc71 ;
+  color: #fff;
+  padding: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background-color: #fff;
+    margin-top: 10px;
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    background-color: #27ae60;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+    &:after {
+      width: 100%;
+    }
+  }
 }

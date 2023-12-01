@@ -1,0 +1,53 @@
+// styles.scss
+
+.navbar {
+  background-color: #095e2c;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+
+  a {
+    text-decoration: none;
+    color: #260404;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: #1a839d;
+    }
+  }
+}
+
+div {
+  margin-top: 20px;
+
+  a {
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+a {
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: #e74c3c;
+  }
+}
+
+.navbar a.router-link-active {
+  border-bottom: 2px solid #fff;
+}
+.titolo{
+  background-color: #dbd2d2;
+  justify-content: center;
+  display: flex;
+  background-color:#2ecc71 ;
+}

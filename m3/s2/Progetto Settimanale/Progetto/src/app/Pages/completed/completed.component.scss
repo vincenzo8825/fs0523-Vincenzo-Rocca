@@ -1,0 +1,63 @@
+
+
+
+
+.task {
+  background-color: #f39c12;
+  padding: 10px;
+  margin: 10px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.completedComp {
+  margin-top: 20px;
+
+  .component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .titleCard {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    p {
+      color: #3498db;
+      font-weight: bold;
+    }
+
+    .delete {
+      background-color: #e74c3c;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      margin-top: 5px;
+
+      &:hover {
+        background-color: #c0392b;
+      }
+    }
+
+    .details {
+      display: none;
+      .details {
+        background-color: #ecf0f1;
+        padding: 10px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+      }
+
+      &.show {
+        display: block;
+      }
+    }
+  }
+}

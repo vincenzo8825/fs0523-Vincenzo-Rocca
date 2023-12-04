@@ -12,3 +12,16 @@ throw new Error('Method not implemented.');
   title = 'Project1';
 products: any;
 }
+export class Product{
+  name: string;
+  price: number;
+  description: string;
+  image: string;
+  constructor(name: string, price: number, description: string, image: string) {
+    this.name = name;
+    this.price = price;
+    this.description = description;
+    this.image = image;
+  }
+}
+

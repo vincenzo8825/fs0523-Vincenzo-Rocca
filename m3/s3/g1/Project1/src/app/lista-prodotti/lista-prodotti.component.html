@@ -1,0 +1,20 @@
+<p>lista-prodotti works!</p>
+
+
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let product of products" class="col-md-4 mb-4">
+      <div class="card">
+        <img src="{{ product.image }}" class="card-img-top" alt="{{ product.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text">Price: ${{ product.price }}</p>
+          <button (click)="addToCart(product)" class="btn btn-success">Aggingi al carrello</button>
+          <button (click)="addToFavorites(product)" class="btn btn-outline-primary">Aggiungi ai favoriti</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

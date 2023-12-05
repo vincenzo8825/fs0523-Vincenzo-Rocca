@@ -1,0 +1,13 @@
+
+<div class="container mt-4">
+  <h2>Registrazione</h2>
+  <form (ngSubmit)="submitRegistrazione()">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" class="form-control" id="nome" [(ngModel)]="utente.nome" name="nome" required>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Registrati</button>
+  </form>
+</div>

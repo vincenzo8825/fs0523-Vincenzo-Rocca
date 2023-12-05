@@ -24,4 +24,15 @@ export class Product{
     this.image = image;
   }
 }
+export class Service{
+  addToCart(_t6: any) {
+    throw new Error('Method not implemented.');
+  }
+}
+export class ServiceService{
+  addToCart(_t6: any) {
+    throw new Error('Method not implemented.');
+  }
+}
+
 

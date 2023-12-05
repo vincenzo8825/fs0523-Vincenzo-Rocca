@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-  private apiUrl = 'https://dummyjson.com/products';
+  apiUrl:string = 'https://dummyjson.com/products';
 
   constructor(private http: HttpClient) {}
 

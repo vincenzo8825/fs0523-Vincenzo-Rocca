@@ -1,4 +1,4 @@
-// src/app/registrazione/registrazione.component.ts
+
 import { Component } from '@angular/core';
 import { RegistrazioneService } from '../registrazione.service';
 import { Utente } from '../utente';
@@ -26,7 +26,7 @@ export class RegistrazioneComponent {
   constructor(private registrazioneService: RegistrazioneService) {}
 
   submitRegistrazione() {
-    // Controllo sulla validità della password e conferma password
+
     if (this.utente.password !== this.utente.confermaPassword) {
       this.passwordConfermaError = 'Le password non corrispondono.';
       return;

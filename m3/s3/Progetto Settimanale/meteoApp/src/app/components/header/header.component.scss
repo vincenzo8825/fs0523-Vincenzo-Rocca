@@ -1,0 +1,128 @@
+$primary-color: #3498db;
+$secondary-color: #2980b9;
+$accent-color: #ecf0f1;
+$background-color: #2c3e50;
+$card-background: #34495e;
+$card-text: #ecf0f1;
+$hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+body {
+  background: linear-gradient(to right, $primary-color, $secondary-color);
+  font-family: 'Arial', sans-serif;
+  color: $accent-color;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+
+nav {
+  background-color: $primary-color;
+  padding: 10px 0;
+
+  .navbar-brand img {
+    max-height: 40px;
+  }
+
+  .navbar-toggler-icon {
+    background-color: $accent-color;
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+
+    .nav-link {
+      color: $accent-color;
+      margin-right: 15px;
+
+      &:hover {
+        color: $background-color;
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+
+      .nav-link {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.favorite-container, .search-btn {
+  cursor: pointer;
+}
+
+.favorite-container {
+  background-color: $primary-color;
+  border-radius: 30px;
+  width: 70%;
+  padding: 15px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.fav-title {
+  color: $accent-color;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.fav-list li {
+  margin-bottom: 8px;
+  font-size: 1.2em;
+}
+
+.search-btn, .btn-outline-primary, .btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  color: $accent-color;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+}
+
+.weat-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 22rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: $hover-shadow;
+  }
+
+  .card-img {
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .list-group-item {
+    background-color: $card-background;
+    border: none;
+    color: $card-text;
+  }
+}

@@ -1,3 +1,4 @@
 ng new my-app --no-standalone --routing --ssr=false
 ng generate module customers --route customers --module app.module
 @auth0/angular-jwt
+npm run backend

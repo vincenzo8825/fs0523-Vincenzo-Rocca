@@ -1,0 +1,21 @@
+<div class="form-container container d-flex align-items-center my-5">
+  <form class="form-signin m-auto form-floating my-5">
+
+    <h3 class="mb-3 ms-3 fw-normal text-white">Effettua il login</h3>
+
+    <div class="mb-3">
+      <label for="inputEmail" class="form-label">Email</label>
+      <input type="email" [(ngModel)]="loginData.email" name="email" class="form-control" id="inputEmail" placeholder="Email" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="inputPassword" class="form-label">Password</label>
+      <input type="password" [(ngModel)]="loginData.password" name="password" class="form-control" id="inputPassword" placeholder="Password" required>
+    </div>
+
+    <div *ngIf="errorMessage" class="alert alert-danger mt-1 error-msg">{{ errorMessage }}</div>
+
+    <button type="button" class="btn btn-primary w-100 py-2 my-3" (click)="save()">Login</button>
+    <a class="btn btn-outline-primary w-100 py-2" routerLink="/auth/register">Registrati</a>
+  </form>
+</div>

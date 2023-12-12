@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "email": "Vincenzo@example.it",
+      "password": "$2a$10$dkqCoUHPNnqcStSGYiUdC.EXAQ2CC48ICD2ROzo8jtMqMUD1vPyj2",
+      "name": "Vincenzo",
+      "id": 1
+    },
+    {
+      "email": "vincenzo@example.it",
+      "password": "$2a$10$DSo393S2X.sXVePCM0GfluGLBY2kJ58IvimK2/uO20Ig6zdFCx.iC",
+      "name": "vincenzo",
+      "id": 2
+    }
+  ],
+  "cities": []
+}

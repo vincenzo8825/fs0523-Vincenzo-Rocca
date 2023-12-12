@@ -1,0 +1,126 @@
+<div class="container mt-5">
+  <div class="row">
+
+    <div class="col-md-8">
+      <form class="mb-4">
+        <div class="input-group">
+          <input
+            type="text"
+            [(ngModel)]="cityName"
+            name="cityName"
+            required
+            placeholder="Inserisci il nome della città"
+            (input)="isEmpty()"
+            class="form-control"
+          />
+          <button
+            type="button"
+            (click)="findCity()"
+            class="btn btn-primary"
+            [disabled]="!cityName || buttonDisabled"
+          >
+            Cerca
+          </button>
+        </div>
+      </form>
+
+      <div *ngIf="cityData && cityData.length" class="mb-4">
+        <div class="list-group">
+          <button
+            *ngFor="let city of cityData"
+            (click)="getWeather(city.lat, city.lon)"
+            class="list-group-item list-group-item-action"
+          >
+            {{ city.name }}, {{ city.country }}
+          </button>
+        </div>
+      </div>
+
+
+      <div *ngIf="weatherData">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">{{ weatherData.city.name }}</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Paese:</strong> {{ weatherData.city.country }}</li>
+              <li class="list-group-item">
+                <strong>Temperatura:</strong> {{ weatherData.list[0].main.temp - 273.15 | number:'1.0-0' }}&#176;C
+              </li>
+              <li class="list-group-item">
+                <strong>Meteo attuale:</strong> {{ weatherData.list[0].weather[0].description }}
+              </li>
+              <li class="list-group-item"><strong>Popolazione:</strong> {{ weatherData.city.population }}</li>
+              <li class="list-group-item">
+                <strong>Latitudine:</strong> {{ weatherData.city.coord.lat | number:'1.2-2' }}
+              </li>
+              <li class="list-group-item">
+                <strong>Longitudine:</strong> {{ weatherData.city.coord.lon | number:'1.2-2' }}
+              </li>
+            </ul>
+            <div class="add-remove-buttons mt-3">
+              <button
+                *ngIf="!isCittaPreferita()"
+                (click)="aggiungiAiPreferiti()"
+                class="btn btn-primary w-100"
+              >
+                Aggiungi ai preferiti
+              </button>
+              <button
+                *ngIf="isCittaPreferita()"
+                (click)="rimuoviDaPreferiti()"
+                class="btn btn-danger w-100 mt-2"
+              >
+                Rimuovi dai preferiti
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div *ngIf="weatherData" class="weat-card row row-cols-1 row-cols-md-3 g-4">
+          <div *ngFor="let forecast of weatherData.list; let i = index">
+            <div class="col">
+              <div class="card card-weather mb-4">
+                <img
+                  [src]="getImageUrl(forecast.weather[0].main) || getRandomLoremPicsumUrl()"
+                  class="card-img-top card-img"
+                  alt="weather-image"
+                />
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    {{ forecast.main.temp - 273.15 | number: '1.0-1' }} &#176;C
+                  </h6>
+                  <p class="card-text">{{ forecast.weather[0].main }}</p>
+                  <p class="card-text">
+                    <strong>Lat:</strong> {{ weatherData.city.coord.lat | number:'1.2-2' }}, <strong>Lon:</strong>
+                    {{ weatherData.city.coord.lon | number:'1.2-2' }}
+                  </p>
+
+                  <span (click)="toggleFavIcon(i)" class="fav-icon" [ngClass]="{'red-heart': favIconStates[i]}">
+                    <ng-container *ngIf="favIconStates[i]">❤️</ng-container>
+                    <ng-container *ngIf="!favIconStates[i]">🤍</ng-container>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Città Preferite</h5>
+
+          <ul class="list-group">
+            <li *ngFor="let citta of preferitiSvc.getPreferiti()" class="list-group-item d-flex justify-content-between align-items-center">
+              <span>{{ citta }}</span>
+              <span class="badge bg-primary rounded-pill">Elimina</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

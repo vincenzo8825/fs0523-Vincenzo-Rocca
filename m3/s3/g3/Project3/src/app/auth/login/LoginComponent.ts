@@ -1,3 +1,4 @@
+import { LoginComponent } from './loginComponent';
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 

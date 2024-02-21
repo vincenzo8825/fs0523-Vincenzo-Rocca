@@ -82,7 +82,10 @@ img{
     background-color: #1a8917;
     color: white;
 }
-
+.letterM {
+    transition: 300ms ease-in;
+    opacity: 1;
+}
 /* HEADER */
 .header{
     background-color: #FFC017;
